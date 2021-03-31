@@ -17,7 +17,7 @@ using System.Text;
 using System.Threading;
 
 namespace OpenHardwareMonitor.Hardware.CPU {
-  internal class GenericCPU : Hardware {
+  public class GenericCPU : Hardware {
 
     protected readonly CPUID[][] cpuid;
    
@@ -265,6 +265,8 @@ namespace OpenHardwareMonitor.Hardware.CPU {
     public double TimeStampCounterFrequency {
       get { return timeStampCounterFrequency; }
     }
+
+    public int GetCoreCount() => coreCount;
 
     public override void Update() {
       if (hasTimeStampCounter && isInvariantTimeStampCounter) {

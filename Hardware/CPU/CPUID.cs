@@ -13,13 +13,13 @@ using System.Text;
 
 namespace OpenHardwareMonitor.Hardware.CPU {
 
-  internal enum Vendor {
+  public enum Vendor {
     Unknown,
     Intel,
     AMD,
   }
 
-  internal class CPUID {
+  public class CPUID {
 
     private readonly int group;
     private readonly int thread;
